@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Trade Transaction</title>
+<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="css/app/index.css"></link>
+
+<script type="text/javascript" src="js/lib/jQuery/jQuery.js"></script>
+<script type="text/javascript" src="js/lib/jquery.blockUI.js"></script>
+<script type="text/javascript" src="js/app/index.js"></script>
+</head>
+<body class="container-fluid">	
+	<div class="jumbotron">
+		<h3>Trade Application</h3>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>			
+			<div class="col-md-6">
+			<div id="message"></div>
+				<form>
+					<div class="form-group">
+						<label for="userName">Name:</label> <input type="text"
+							class="form-control" id="userName" placeholder="name">
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="exampleInputPassword1">Security</label> <select
+								id="securities" class="form-control" onchange="getAvailableUnits()">								
+							</select>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="availableUnits">Available Units:</label>
+							<input type="text" class="form-control" placeholder="Available units" id="availableUnitsValue" 
+							disabled="disabled"/>
+						</div>
+					</div>					
+					<div class="form-group">
+						<label for="transactionUnit">Transaction Unit:</label> <input
+							type="text" class="form-control" id="transactionUnit"
+							placeholder="unit">
+					</div>						
+					<div class="form-group">
+						<div class="form-check form-check-inline" >
+							<input class="form-check-input" type="radio" name="transactionType"
+								id="buy" value="BUY" checked> <label
+								class="form-check-label" for="buy">Buy</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="transactionType"
+							id="sell" value="SELL"> <label
+							class="form-check-label" for="sell">Sell</label>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary" onclick="makeTransaction()">Submit</button>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+	<div class="container"></div>
+</body>
+</html>

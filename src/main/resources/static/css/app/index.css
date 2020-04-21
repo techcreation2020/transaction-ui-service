@@ -1,0 +1,13 @@
+body {
+	  background-color: lightblue;	
+}
+
+.error {
+	border: 2px solid red;
+}
+.error-message {
+	color: red;
+}
+.success-message {
+	color: green;
+}
